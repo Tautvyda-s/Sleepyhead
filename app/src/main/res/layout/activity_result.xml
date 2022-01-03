@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".games.touch.result">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_dark"
+        android:text="You Win"
+        android:textSize="40sp"
+        android:layout_marginTop="80dp"/>
+    <TextView
+    android:id="@+id/scoreLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="150"
+    android:textSize="40sp"
+    android:layout_marginTop="20dp"/>
+    <TextView
+    android:id="@+id/highScoreLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="High Score: 300"
+    android:textSize="20sp"
+    android:layout_marginTop="50dp"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="220sp"
+        android:layout_height="160sp"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/accent"
+        android:text="Disable Alarm"
+        android:onClick="goToMain"
+        android:textAllCaps="false" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sleepyhead">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Sleepyhead"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TotalScore"
+            android:exported="false" />
+        <activity
+            android:name=".games.math.MathGame"
+            android:exported="false" />
+        <activity
+            android:name=".games.match.MatchGame"
+            android:exported="false" />
+        <activity
+            android:name=".games.touch.TouchGame"
+            android:exported="false" />
+        <activity
+            android:name=".games.touch.result"
+            android:exported="false" />
+        <activity
+            android:name=".games.shake.ShakeActivity"
+            android:exported="false" />
+        <activity android:name=".ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.AddEditAlarmActivity" />
+        <activity
+            android:name=".ui.AlarmLandingPageActivity"
+            android:theme="@style/AlertLandingPageTheme" />
+
+        <receiver android:name=".service.LoadAlarmsReceiver" />
+
+        <receiver android:name=".service.AlarmReceiver" />
+        <receiver
+            android:name=".service.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="${bootPriority}">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.LoadAlarmsService" />
+        <service android:name=".service.RingtonePlayingService" />
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+</manifest>

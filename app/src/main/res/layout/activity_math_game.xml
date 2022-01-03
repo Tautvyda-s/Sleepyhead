@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".games.math.MathGame">
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="180sp"
+        android:layout_height="180sp"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/yellow"
+        android:text="GO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_tryAgain"
+        android:layout_width="260sp"
+        android:layout_height="180sp"
+        android:textColor="@color/white"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/accent"
+        android:text="Try Again"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginEnd="8sp"
+        android:layout_marginLeft="8sp"
+        android:layout_marginRight="8sp"
+        android:layout_marginStart="8sp"
+        android:max="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8sp"
+        android:layout_marginStart="8sp"
+        android:text="10s"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18sp"
+        android:layout_marginRight="8sp"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+    <TextView
+        android:id="@+id/tv_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8sp"
+        android:text=" ? "
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_score"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toEndOf="@+id/tv_timer"
+        app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+    <TableLayout
+        android:layout_width="0sp"
+        android:layout_height="400sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginStart="8sp"
+        android:layout_marginTop="15sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_answer0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200sp"
+                android:backgroundTint="@color/primary"
+                android:text=" ">
+            </Button>
+            <Button
+                android:id="@+id/btn_answer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200sp"
+                android:text=" "
+                android:backgroundTint="@color/primary_dark"
+                tools:layout_editor_absolutelyX="73sp"
+                tools:layout_editor_absolutelyY="124sp">
+            </Button>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <Button
+                android:id="@+id/btn_answer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="200sp"
+                android:backgroundTint="#0fb9b1"
+                android:text="">
+
+            </Button>
+            <Button
+                android:id="@+id/btn_answer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#3498db"
+                android:height="200sp"
+                android:text=" ">
+            </Button>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_bottom_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginLeft="8sp"
+        android:layout_marginEnd="8sp"
+        android:layout_marginRight="8sp"
+        android:layout_marginBottom="32dp"
+        android:text="0/3"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
+
+
+</android.support.constraint.ConstraintLayout>
